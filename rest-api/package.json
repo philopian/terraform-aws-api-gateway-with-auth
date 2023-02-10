@@ -1,0 +1,12 @@
+{
+  "name": "rest-api",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "scripts": {
+    "lambda:envoke:local": "node -e \"console.log(require('./src/index.js').handler(require('./test/event.json')));\""
+  },
+  "dependencies": {
+    "moment": "^2.29.4"
+  }
+}
