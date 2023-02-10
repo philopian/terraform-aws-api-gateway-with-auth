@@ -1,0 +1,28 @@
+@token = {{$dotenv token}}
+@BASE_URL = {{$dotenv base_url}}
+##############################
+
+
+
+
+#####
+# NO `Authorization` == Unauthorised!
+####
+GET {{BASE_URL}} HTTP/1.1
+Content-Type: application/json
+
+
+#####
+# NO `Authorization: Bearer `  == "User is not authorized"
+####
+GET {{BASE_URL}}/api HTTP/1.1
+Authorization: 123456789
+Content-Type: application/json
+
+
+#####
+# With token
+####
+GET {{BASE_URL}}/api HTTP/1.1
+Authorization: Bearer 123456789
+Content-Type: application/json
