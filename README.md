@@ -32,6 +32,7 @@ $ ./kill.sh dev
 ```
 
 
-
+## How to test
+- After the terraform code has been run once it will create a `.env` file with `account_id`, `base_url`, `function_name` where you can make a [PostMan](https://www.postman.com) or if you are using vscode you can install an [rest-client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) extension and run the `./rest.http` file (which consumes the `.env` file)
 
 
