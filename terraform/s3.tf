@@ -5,7 +5,7 @@ resource "aws_s3_bucket" "rest_api_source" {
   bucket = var.project_name
   tags = {
     Name        = "My bucket for API Gateway source code"
-    Environment = "Dev"
+    Environment = terraform.workspace
   }
 }
 

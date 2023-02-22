@@ -22,7 +22,7 @@ resource "aws_s3_bucket" "authorizer_source" {
   bucket = "${var.project_name}-authorizer"
   tags = {
     Name        = "My bucket for API Gateway custom authorizer source code"
-    Environment = "Dev"
+    Environment = terraform.workspace
   }
 }
 
