@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 import './App.css'
 
-const URL = 'https://6v72fsx15e.execute-api.us-west-2.amazonaws.com/v1/api'
+const URL = '...' // TODO: UPDATE ME
 const mockBearerToken = 'Bearer 123456789'
 
 function App() {

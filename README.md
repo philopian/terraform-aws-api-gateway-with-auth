@@ -36,3 +36,6 @@ $ ./kill.sh dev
 - After the terraform code has been run once it will create a `.env` file with `account_id`, `base_url`, `function_name` where you can make a [PostMan](https://www.postman.com) or if you are using vscode you can install an [rest-client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) extension and run the `./rest.http` file (which consumes the `.env` file)
 
 
+## Test to see if CORS is enabled with a React app
+- Add the REST URI to line 5 of `./client-testing-the-service/src/App.jsx`, (when you run the `./deploy.sh dev` the URI is writen to your `.env` file)
+
