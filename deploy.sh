@@ -1,5 +1,16 @@
 set -e
 
+
+# Build the source
+rm -rf dist
+pushd rest-api
+yarn
+popd
+pushd authorizer
+yarn
+popd
+
+
 export $(grep -v '^#' .env.local | xargs)
 echo "Using AWS ACCOUNT: $AWS_PROFILE for $AWS_ACCOUNT_ID"
 

@@ -1,5 +1,11 @@
 const logger = require("./utils/logger.js");
 
+const headers = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE",
+  "Access-Control-Allow-Headers": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token",
+};
+
 module.exports.handler = async (event) => {
   let statusCode = 200;
   let body = {};
@@ -13,9 +19,7 @@ module.exports.handler = async (event) => {
       };
       response = {
         statusCode,
-        headers: {
-          "x-custom-header": "REQUESTED GET",
-        },
+        headers,
         body: JSON.stringify(body),
       };
       return response;
@@ -28,9 +32,7 @@ module.exports.handler = async (event) => {
       };
       response = {
         statusCode,
-        headers: {
-          "x-custom-header": "REQUESTED POST",
-        },
+        headers,
         body: JSON.stringify(body),
       };
       return response;
@@ -41,9 +43,7 @@ module.exports.handler = async (event) => {
       };
       response = {
         statusCode,
-        headers: {
-          "x-custom-header": "REQUESTED OTHER",
-        },
+        headers,
         body: JSON.stringify(body),
       };
       return response;
